@@ -1,0 +1,43 @@
+
+.contenedor-navbar{
+    display: flex;
+    padding: 0px;
+}
+
+
+.contenedor-marca{
+    display: flex;
+    align-items: center;
+    background-color: rgb(245, 242, 242);
+    list-style: none;
+}
+
+.links-marca{
+    text-decoration: none;
+    font-family: 'Rubik Vinyl', cursive;
+}
+
+
+.contenedor-nav{
+    display: flex;
+    
+    width: 100%;
+    list-style: none;
+    align-items: center;
+    justify-content: end;
+    
+    
+    background-color: rgb(245, 242, 242);
+}
+
+.logo-marca, .logo-carrito{
+    width: 50px;
+    height: 50px;
+}
+
+.links-nav{
+    
+    text-decoration: none;
+    margin-right: 10px;
+    justify-content: end;
+}
