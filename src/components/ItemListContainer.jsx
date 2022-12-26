@@ -1,7 +1,8 @@
-export const ItemListContainer = (props) => {
+import ItemList from "./ItemList"
+
+const ItemListContainer = () => {
   return (
-    <div className="greetings">
-        <h1 className="greetings-text">{props.greetings}</h1>
-    </div>
+    <ItemList/>
   )
 }
+export default ItemListContainer

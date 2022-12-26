@@ -1,6 +1,6 @@
 
 import './App.css';
-import { ItemListContainer } from './components/ItemListContainer';
+import ItemListContainer from "./components/ItemListContainer"
 import NavBar from './components/NavBar/NavBar';
 import "./css/Main.css"
 
@@ -14,7 +14,7 @@ function App() {
         </header>
 
         <main>
-          <ItemListContainer greetings = "Hola a todos!!"/>
+          <ItemListContainer/>
         </main>
       </div>
     </>
