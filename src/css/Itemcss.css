@@ -1,24 +1,18 @@
 
 .grid-cartas{
     display:grid;
-    grid-template-columns: repeat(3, 400px);
-    gap: 40px 20px;
+    grid-template-columns: repeat(4, 300px);
 }
-
-/* .img-carta{
-    height: 300px;
-    width: 250px;
-} */
 
 .img-carta{
-    height: 320px;
-    width: 250px;
+    height: 250px;
+    width: 200px;
 }
 
-
 .title-carta{
-    color: rgb(54, 52, 52);
-    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,7 +24,7 @@
 }
 
 .precio-carta{
-    font-size: 25px;
+    font-size: 20px;
     color: black;
 }
 
@@ -44,27 +38,17 @@
 }
 
 .stock-carta{
-    font-size: 25px;
+    font-size: 20px;
     color: black;
 }
 
-
 .agrandar-carta{
-    width: 350px;
-    height: 550px;
+    width: 200px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    /* From https://css.glass */
-    background: rgba(241, 167, 122, 0.26);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border: 1px solid rgba(241, 167, 122, 0.3);
-
     transition: 1.5s ease;
 }
 
@@ -72,22 +56,13 @@
     transform : scale(1.02);
 }
 
-
 .flexbox{
     display: flex;
     justify-content: center;
     margin-top: 100px;
 }
 
-.categoria{
-    display: flex;
-    width: 290px;
-    height: 30px;
-    padding-top: 20px;
-    justify-content: space-between;
-}
-
 .precio-y-stock{
     display: flex;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }

@@ -11,15 +11,20 @@ const Item = (props) => {
             <div className="carta">
                 <div className="agrandar-carta">
                 <img className = "img-carta" src = {img} alt={title}/>
+                <span className="categoria-carta">{category}</span>
                 <h2 className="title-carta">{title}</h2>
-                <div className="precio-y-stock">
+
+                  <div className="precio-y-stock">
                 <strong className="stock-carta">Stock: {stock}  |</strong>
                 <strong className="precio-carta"> |  ${price}</strong>
-                </div>
+                  </div>
+
                 <button className="boton-carta">Ver más</button>
-                <div className="categoria">
+
+                  {/* <div className="categoria">
                 <span className="categoria-carta">Categoría: <br/>   {category}</span>
-                </div>
+                  </div> */}
+                  
                 </div>
             </div>
     

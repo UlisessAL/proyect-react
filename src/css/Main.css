@@ -1,10 +1,30 @@
 
 .body-background{
-    background-image: url("https://img.freepik.com/vector-gratis/fondo-rayas-geometricas-diagonales-semitono-detallado_1409-1444.jpg?w=2000");
-    background-attachment: fixed;
-    background-size: cover;
-
+    background-color: rgb(255, 255, 255);
     height: 100%;
 }
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cont-carousel{
+    width: 1600px;
+}
+
+.navbar{
+    width: 1600px;
+    z-index: 1;
+}
+
+.letras-nav{
+    color: rgb(255, 255, 255);
+}
+
+.letras-nav:hover{
+    color: rgb(176, 173, 173);
+}
+
 
 
