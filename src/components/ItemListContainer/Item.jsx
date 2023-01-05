@@ -1,8 +1,9 @@
-import "../css/Itemcss.css"
+import { Link } from "react-router-dom";
+import "../../css/Itemcss.css"
 
 const Item = (props) => {
 
-    const {title, category, stock, img, price} = props.mangas;
+    const {title, category, stock, img, price, id} = props.mangas;
 
   return (
     
@@ -19,12 +20,9 @@ const Item = (props) => {
                 <strong className="precio-carta"> |  ${price}</strong>
                   </div>
 
-                <button className="boton-carta">Ver más</button>
-
-                  {/* <div className="categoria">
-                <span className="categoria-carta">Categoría: <br/>   {category}</span>
-                  </div> */}
-                  
+                <Link to={`/item/${id}`}>
+                  <button className="boton-carta">Ver más</button>
+                </Link>  
                 </div>
             </div>
     

@@ -3,37 +3,31 @@ import "../../css/ItemDetail.css"
 
 const ItemDetail = (props) => {
 
-    const {title, category, stock, img, price, about} = props.manga;
-
-    const [count, setCount] = useState(1);
-
-    const [newStock, setNewStock] = useState(1);
+    const {title, category, stock, img, price, about} = props.manga,
+    [count, setCount] = useState(1),
+    [newStock, setNewStock] = useState(1);
 
     useEffect(() => {
         setNewStock(stock - 1)
     }, [stock])
     
-
     const addCount = () => {
         
         if (count !== stock) {
             setCount(count + 1);
             setNewStock(newStock - 1);
-            console.log(newStock);
         }else{
             setNewStock(0);
         }
-    }
-
-    const restCount = () => {
+    },
+    restCount = () => {
         if (count !== 1) {
             setCount(count - 1);
             setNewStock(newStock + 1);
-            console.log(newStock);
-    }else{
-        setNewStock(stock - 1)
-    }
-}
+        }else{
+            setNewStock(stock - 1)
+        }
+    };
 
     return (
     <>

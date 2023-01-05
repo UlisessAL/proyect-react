@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const CartWidget = () => {
 const estiloCarrito = {
     fontSize: "20px"
@@ -5,9 +7,9 @@ const estiloCarrito = {
 
 return (
     <>
-        <a style={estiloCarrito} href="#">
+        <Link style={estiloCarrito} to="/cart">
             🛒
-        </a>
+        </Link>
     </>
 )
 }
