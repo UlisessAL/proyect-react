@@ -1,33 +1,9 @@
-import { useEffect, useState } from "react";
 import "../../css/ItemDetail.css"
+import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = (props) => {
 
-    const {title, category, stock, img, price, about} = props.manga,
-    [count, setCount] = useState(1),
-    [newStock, setNewStock] = useState(1);
-
-    useEffect(() => {
-        setNewStock(stock - 1)
-    }, [stock])
-    
-    const addCount = () => {
-        
-        if (count !== stock) {
-            setCount(count + 1);
-            setNewStock(newStock - 1);
-        }else{
-            setNewStock(0);
-        }
-    },
-    restCount = () => {
-        if (count !== 1) {
-            setCount(count - 1);
-            setNewStock(newStock + 1);
-        }else{
-            setNewStock(stock - 1)
-        }
-    };
+    const {title, category, stock, img, price, about} = props.manga;
 
     return (
     <>
@@ -38,22 +14,11 @@ const ItemDetail = (props) => {
                     <strong className="price-manga">${price}</strong>
                     <p className="about-manga"> Sinopsis: {about}</p>
                     <p>Categoría: {category}</p>
-                    <div className="stock-and-count">
-                        <p className="stock-manga">Disponible: {newStock}</p>
-                        <div className="btn-count">
-                                <button className="btn" id="btn-manga" disabled={newStock === stock -1} onClick={restCount}>-</button>
-                                <p className="count">{count}</p>
-                                <button className="btn" id="btn-manga" disabled={newStock === 0}onClick={addCount}>+</button>
-                        </div>
-                    </div>
-                    <div className="cont-btn-manga">
-                        <button className="btn" id="manga-btn" >Añadir al carrito</button>
-                    </div>
-                    
+                    <ItemCount stock={stock} />
                 </div>
         </div>
     
     </>
-  )
+)
 }
 export default ItemDetail
