@@ -3,9 +3,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import "./css/Main.css"
-import ItemDetailContainer from './ItemDetailContainer/ItemDetailContainer';
 import LoadFailPage from './components/error404/LoadFailPage';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
   return (

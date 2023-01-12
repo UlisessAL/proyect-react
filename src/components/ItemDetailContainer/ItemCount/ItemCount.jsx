@@ -38,7 +38,7 @@ return (
             </div>
         </div>
         <div className="cont-btn-manga">
-            <button className="btn" id="manga-btn" >Añadir al carrito</button>
+            <button className="btn" id="manga-btn" onClick={() => props.onAddToCart(count)}>Añadir al carrito</button>
         </div>
     </>
     )

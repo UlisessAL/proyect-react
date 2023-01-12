@@ -1,10 +1,16 @@
 import { useEffect, useState } from "react"
-import { getManga } from "../services/mockServices";
-import ItemDetail from "./ItemDetail/ItemDetail"
-import "../css/ItemDetail.css"
+import "../../css/ItemDetail.css"
 import { useNavigate, useParams } from "react-router-dom";
+import ItemDetail from "./ItemDetail/ItemDetail";
+import { getManga } from "../../services/mockServices";
 
 const ItemDetailContainer = () => {
+
+    const [quantCart, setQuantCart] = useState(0),
+    handleAddToCart = (quantity) => {
+        setQuantCart(quantity);
+        console.log(quantity);
+    };
 
     const [manga, setManga] = useState([]),
     redirection = useNavigate();
@@ -27,7 +33,7 @@ const ItemDetailContainer = () => {
     return (
         <>
             <div className="container-manga">
-                <ItemDetail manga={manga}/>
+                <ItemDetail manga={manga} onAddToCart={handleAddToCart} quantityProduct={quantCart}/>
             </div>  
         </>
     )

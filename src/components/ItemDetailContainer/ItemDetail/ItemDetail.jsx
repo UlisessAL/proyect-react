@@ -1,9 +1,11 @@
-import "../../css/ItemDetail.css"
+import { Link } from "react-router-dom";
+import "../../../css/ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = (props) => {
 
-    const {title, category, stock, img, price, about} = props.manga;
+    const {title, category, stock, img, price, about} = props.manga,
+    quantity = props.quantityProduct;
 
     return (
     <>
@@ -14,10 +16,13 @@ const ItemDetail = (props) => {
                     <strong className="price-manga">${price}</strong>
                     <p className="about-manga"> Sinopsis: {about}</p>
                     <p>Categoría: {category}</p>
-                    <ItemCount stock={stock} />
+                    {
+                        quantity === 0 ? <ItemCount stock={stock} onAddToCart={props.onAddToCart}/>
+                        :
+                        <Link className="btn btn-cart" id="manga-btn" to="/cart">Terminar mi compra</Link>
+                    }
                 </div>
         </div>
-    
     </>
 )
 }
