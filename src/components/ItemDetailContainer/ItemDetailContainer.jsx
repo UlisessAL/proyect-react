@@ -1,18 +1,15 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import "../../css/ItemDetail.css"
 import { useNavigate, useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail/ItemDetail";
 import { getManga } from "../../services/mockServices";
+import { cartContext } from "../../storage/cartContext";
+import Loader from "../Loader/Loader";
 
 const ItemDetailContainer = () => {
 
-    const [quantCart, setQuantCart] = useState(0),
-    handleAddToCart = (quantity) => {
-        setQuantCart(quantity);
-        console.log(quantity);
-    };
-
     const [manga, setManga] = useState([]),
+    [loader, setLoader] = useState(),
     redirection = useNavigate();
 
     let params = useParams();
@@ -20,22 +17,39 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         getManga(params.id)
         .then((res) => {
-            setManga(res)
+            setManga(res);
+            setLoader(true)
         })
         .catch((error) => {
-            alert(error)
+            alert(error);
+            setLoader(true)
             setTimeout(() => {
                 redirection("/")
             }, 2000);
         })
-    }, [])
-    
-    return (
-        <>
-            <div className="container-manga">
-                <ItemDetail manga={manga} onAddToCart={handleAddToCart} quantityProduct={quantCart}/>
-            </div>  
-        </>
-    )
+    }, []);
+
+    const {addToCart} = useContext(cartContext);
+    const [cant, setCant] = useState(0);
+
+    const handleAddToCart = (quantity) => {
+        const mangaAndCount = {...manga, quantity:quantity}
+        addToCart(mangaAndCount, quantity);
+        console.log(quantity);
+        setCant(quantity);
+    };
+
+ 
+    if (loader === undefined){
+        return <Loader/>
+    } else{
+        return (
+            <>
+                <div className="container-manga">
+                    <ItemDetail manga={manga} onAddToCart={handleAddToCart} quantityProduct={cant} />
+                </div>  
+            </>
+        )
+    }
 }
 export default ItemDetailContainer

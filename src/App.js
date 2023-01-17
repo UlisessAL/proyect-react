@@ -6,27 +6,31 @@ import "./css/Main.css"
 import LoadFailPage from './components/error404/LoadFailPage';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { CartProvider } from './storage/cartContext';
+import CartContainer from './components/CartContainer/CartContainer';
 
 function App() {
   return (
     <div className='body-background'>
       <BrowserRouter>
-      
-          <header className='main'>
-            <NavBar/>
-          </header>
+        <CartProvider>
+            <header className='main'>
+              <NavBar/>
+            </header>
 
-          <Routes>
+            <Routes>
 
-            <Route path="/"  element={<ItemListContainer/>}/>
+              <Route path="/"  element={<ItemListContainer/>}/>
 
-            <Route path="/category/:categoryid"  element={<ItemListContainer/>}/>
+              <Route path="/category/:categoryid"  element={<ItemListContainer/>}/>
 
-            <Route path="/item/:id"  element={<ItemDetailContainer/>}/>
+              <Route path="/cart"  element={<CartContainer/>}/>
 
-            <Route path="*"  element={<LoadFailPage/>}/>
-          </Routes>
-        
+              <Route path="/item/:id"  element={<ItemDetailContainer/>}/>
+
+              <Route path="*"  element={<LoadFailPage/>}/>
+            </Routes>
+          </CartProvider>
         </BrowserRouter>
     </div>
   );

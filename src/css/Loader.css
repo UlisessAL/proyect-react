@@ -1,0 +1,12 @@
+.loader-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 1000px;
+    align-items: center;
+}
+
+.h2-loader{
+    font-size: 35px;
+    font-weight: bold;
+}

@@ -1,0 +1,40 @@
+
+.table-cart{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 2000px;
+}
+
+.table-cart-inf{
+    margin-top: 100px;
+    width: 1400px;
+}
+
+.table-color{
+    color: rgb(194, 32, 32);
+}
+
+.button-table{
+    border-color: red;
+    color: white;
+}
+
+.total-price{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.img-cart{
+    width: 50px;
+}
+
+.buttons-cart{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.end-purchase{
+    margin-left: 20px;
+}

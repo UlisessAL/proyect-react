@@ -1,0 +1,23 @@
+.products-alert{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1000px;
+}
+
+.img-alert{
+    margin-top: 100px;
+    width: 700px;
+}
+
+.h2-alert{
+    font-size: 40px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.p-alert{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px;
+}
