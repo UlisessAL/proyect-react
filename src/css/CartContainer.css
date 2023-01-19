@@ -8,7 +8,7 @@
 
 .table-cart-inf{
     margin-top: 100px;
-    width: 1400px;
+    width: 1200px;
 }
 
 .table-color{
@@ -37,4 +37,8 @@
 
 .end-purchase{
     margin-left: 20px;
+}
+
+.btn-table-cart{
+    margin-left: 250px;
 }

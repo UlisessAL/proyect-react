@@ -26,9 +26,10 @@ const CartContainer = () => {
                                 <tr className="table-color">
                                     <th></th>
                                     <th> Nombre</th>
+                                    <th>Precio</th>
                                     <th>Cantidad</th>
-                                    <th></th>
                                     <th>Total</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -37,14 +38,16 @@ const CartContainer = () => {
                                         <tr className="hover table-color" key={c.id}>
                                             <td ><img src={c.img} alt={c.img} className="img-cart" /></td>
                                             <td >{c.title}</td>
+                                            <td>${c.price}</td>
                                             <td >{c.quantity}</td>
-                                            <td >
-                                                <button onClick={() => removeItem(c)} className="btn  bg-orange-600 button-table"> Eliminar</button>
-                                            </td>
                                             <td >${c.quantity * c.price}</td>
+                                            <td>
+                                                <button onClick={() => removeItem(c)} className="btn btn-table-cart bg-orange-600 button-table"> X </button>
+                                            </td>
                                         </tr>
                 )})}
                                         <tr>
+                                            <td></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>

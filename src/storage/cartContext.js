@@ -39,9 +39,13 @@ function CartProvider(props){
     const totalItemsInCart = () => {
         let total = 0;
         let product;
-        for (product of cart) {
-            const {quantity} = product
-            total += quantity;
+        // for (product of cart) {
+        //     const {quantity} = product
+        //     total += quantity;
+        // }
+
+        for (product of cart){
+            total ++
         }
         return total;
     }

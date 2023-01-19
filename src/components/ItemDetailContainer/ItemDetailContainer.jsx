@@ -2,9 +2,9 @@ import { useContext, useEffect, useState } from "react"
 import "../../css/ItemDetail.css"
 import { useNavigate, useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail/ItemDetail";
-import { getManga } from "../../services/mockServices";
 import { cartContext } from "../../storage/cartContext";
 import Loader from "../Loader/Loader";
+import { getManga } from "../../services/firebase";
 
 const ItemDetailContainer = () => {
 
