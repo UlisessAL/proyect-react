@@ -1,4 +1,101 @@
+/* @media screen and (min-width: 768px){
 
+    .table-cart{
+        display: flex;
+        justify-content: center;
+        width: 768px;
+        height: 1500px;
+    }
+    
+    .table-cart-inf{
+        margin-top: 100px;
+        width: 600px;
+    }
+    
+    .table-color{
+        color: rgb(194, 32, 32);
+    }
+    
+    .button-table{
+        border-color: red;
+        color: white;
+    }
+    
+    .total-price{
+        font-weight: bold;
+        font-size: 20px;
+    }
+    
+    .img-cart{
+        width: 50px;
+    }
+    
+    .buttons-cart{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+    }
+    
+    .end-purchase{
+        margin-left: 20px;
+    }
+    
+    .btn-table-cart{
+        margin-left: 250px;
+    }
+
+} */
+
+
+
+@media screen and (min-width: 1024px){
+    .table-cart{
+        display: flex;
+        justify-content: center;
+        width: 1024px;
+        height: 1500px;
+    }
+    
+    .table-cart-inf{
+        margin-top: 100px;
+        width: 1000px;
+    }
+    
+    .table-color{
+        color: rgb(194, 32, 32);
+    }
+    
+    .button-table{
+        border-color: red;
+        color: white;
+    }
+    
+    .total-price{
+        font-weight: bold;
+        font-size: 20px;
+    }
+    
+    .img-cart{
+        width: 50px;
+    }
+    
+    .buttons-cart{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+    }
+    
+    .end-purchase{
+        margin-left: 20px;
+    }
+    
+    .btn-table-cart{
+        margin-left: 250px;
+    }
+}
+
+
+@media screen and (min-width: 1440px){
 .table-cart{
     display: flex;
     justify-content: center;
@@ -11,34 +108,9 @@
     width: 1200px;
 }
 
-.table-color{
-    color: rgb(194, 32, 32);
-}
-
-.button-table{
-    border-color: red;
-    color: white;
-}
-
 .total-price{
     font-weight: bold;
     font-size: 25px;
 }
 
-.img-cart{
-    width: 50px;
-}
-
-.buttons-cart{
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
-}
-
-.end-purchase{
-    margin-left: 20px;
-}
-
-.btn-table-cart{
-    margin-left: 250px;
 }
