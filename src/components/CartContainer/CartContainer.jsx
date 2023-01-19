@@ -21,7 +21,7 @@ const CartContainer = () => {
             <div className="table-cart">
                 <div className="table-cart-inf">
                     <div className="overflow-x-auto">
-                        <table className="table" id=" table-color">
+                        <table className="table w-full table-compact" id=" table-color">
                             <thead>
                                 <tr className="table-color">
                                     <th></th>
