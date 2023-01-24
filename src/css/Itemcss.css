@@ -1,3 +1,79 @@
+@media screen and (min-width: 300px){
+
+    .grid-cartas{
+        display:grid;
+        grid-template-columns: repeat(1, 250px);
+    }
+
+    .img-carta{
+        height: 250px;
+        width: 200px;
+    }
+    
+    .title-carta{
+        color: rgb(0, 0, 0);
+        font-size: 15px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .categoria-carta{
+        color: grey;
+        font-size: 15px;
+    }
+    
+    .precio-carta{
+        font-size: 20px;
+        color: black;
+    }
+    
+    .boton-carta{
+        border-radius: 5px;
+        width: 200px;
+        height: 30px;
+        background-color: red;
+        border-color: red;
+        color: aliceblue;
+    }
+    
+    .stock-carta{
+        font-size: 20px;
+        color: black;
+    }
+    
+    .agrandar-carta{
+        width: 200px;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 1.5s ease;
+    }
+    
+    .agrandar-carta:hover{
+        transform : scale(1.02);
+    }
+    
+    .flexbox{
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+    }
+    
+    .precio-y-stock{
+        display: flex;
+        padding-bottom: 10px;
+    }
+
+
+}
+
+
+
+
 @media screen and (min-width: 768px){
     .grid-cartas{
         display:grid;
