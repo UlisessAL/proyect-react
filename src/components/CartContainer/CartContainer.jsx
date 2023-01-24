@@ -18,7 +18,7 @@ const CartContainer = () => {
     } else{
         return ( 
         <>
-            <div className="table-cart">
+            {/* <div className="table-cart">
                 <div className="table-cart-inf">
                     <div className="overflow-x-auto">
                         <table className="table w-full" id=" table-color">
@@ -45,7 +45,7 @@ const CartContainer = () => {
                                                 <button onClick={() => removeItem(c)} className="btn btn-table-cart bg-orange-600 button-table"> X </button>
                                             </td>
                                         </tr>
-                )})}
+                                    )})}
                                         <tr>
                                             <td></td>
                                             <td></td>
@@ -57,6 +57,52 @@ const CartContainer = () => {
                                         </tr>
                             </tbody>
                         </table>
+
+                        <div className="buttons-cart">
+                            <button className="btn bg-orange-600 button-table" onClick={() => clearCart()}>borrar carrito</button>
+                            <button className="btn bg-orange-600 button-table end-purchase">Finalizar Compra</button>
+                        </div>
+        
+                        
+                    </div>
+                </div>
+            </div> */}
+
+
+<div className="table-cart">
+                <div className="table-cart-inf">
+                    <div className="overflow-x-auto">
+                        <table className="table-orig">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th> Nombre</th>
+                                    <th>Precio</th>
+                                    <th>Cantidad</th>
+                                    <th>Total</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {newCart.map((c) => {
+                                    return(
+                                        <tr key={c.id}>
+                                            <td ><img src={c.img} alt={c.img} className="img-cart" /></td>
+                                            <td > <strong>{c.title}</strong></td>
+                                            <td> <strong>${c.price}</strong></td>
+                                            <td > <strong>{c.quantity}</strong></td>
+                                            <td > <strong>${c.quantity * c.price}</strong></td>
+                                            <td>
+                                                <button onClick={() => removeItem(c)} className="btn  bg-orange-600 button-table"> X </button>
+                                            </td>
+                                        </tr>
+                                    )})}
+                            </tbody>
+                        </table>
+
+                        <div className="total-purchase">
+                            <p>El total de tu compra es de <strong>${totalPrice()}</strong></p> 
+                        </div>
 
                         <div className="buttons-cart">
                             <button className="btn bg-orange-600 button-table" onClick={() => clearCart()}>borrar carrito</button>

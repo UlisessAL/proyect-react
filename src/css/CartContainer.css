@@ -8,11 +8,36 @@
 
 .table-cart-inf{
     margin-top: 100px;
-    width: 1200px;
 }
 
-.table-color{
-    color: rgb(194, 32, 32);
+.table-orig{
+    width: 1400px;
+}
+
+thead{
+    background-color: red;
+    color: rgb(255, 255, 255);
+}
+
+td, th{
+    padding: 20px 20px 20px 50px;
+}
+
+tbody, tr{
+    border-color: red;
+    border-width: 0.5px;
+}
+
+td{
+    text-align: center;
+}
+
+.total-purchase{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    font-size: 25px;
+    color: rgb(50, 48, 48);
 }
 
 .button-table{
@@ -37,8 +62,4 @@
 
 .end-purchase{
     margin-left: 20px;
-}
-
-.btn-table-cart{
-    margin-left: 250px;
 }
