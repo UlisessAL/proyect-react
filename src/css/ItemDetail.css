@@ -133,6 +133,11 @@
     
     .title-one-manga{
         max-width: 700px;
+        text-align: start;
+    }
+
+    .price-manga{
+        text-align: start;
     }
     
     .about-manga{
