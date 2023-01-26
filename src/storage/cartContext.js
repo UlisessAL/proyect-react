@@ -1,15 +1,17 @@
-import { createContext, useState } from "react";
-
+import { createContext, useEffect, useState } from "react";
 
 export const cartContext = createContext();
 
-
 function CartProvider(props){
-    const [cart, setCart] = useState([]);
+    const cartFromLocalStorage = JSON.parse(localStorage.getItem("cartStorage")) || [];
+    const [cart, setCart] = useState(cartFromLocalStorage);
+
+    useEffect(() => {
+        localStorage.setItem("cartStorage", JSON.stringify(cart))
+    }, [cart])
 
     const addToCart = (item, cantidad) => {
         
-
         let isInCart = cart.findIndex((itemInCart) => itemInCart.id === item.id);
         let newCart = [...cart]
 
@@ -20,6 +22,7 @@ function CartProvider(props){
             newCart.push(item)
             setCart(newCart)
         }
+        
     };
 
     const removeItem = (product) => {
@@ -54,8 +57,19 @@ function CartProvider(props){
         return total
     }
 
+    const checkStock = (manga) => {
+        let productInCart = cart.find((item) => item.id === manga.id);
+        let updatedStock = manga.stock;
+
+        if(productInCart){
+            updatedStock = manga.stock - productInCart.quantity;
+        };
+
+        return updatedStock;
+    }
+
     return(
-        <cartContext.Provider value={{cart,addToCart, removeItem, clearCart, totalItemsInCart,totalPrice}}>
+        <cartContext.Provider value={{cart,addToCart, removeItem, clearCart, totalItemsInCart,totalPrice, checkStock}}>
             {props.children}
         </cartContext.Provider>
     )

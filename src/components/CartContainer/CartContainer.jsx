@@ -6,11 +6,14 @@ import { orderWithControlStock } from "../../services/firebase";
 import Swal from 'sweetalert2';
 import CartDetail from "./CartDetail/CartDetail";
 import FormCheckout from "./FormCheckout/FormCheckout";
+import { useNavigate } from "react-router-dom";
 
 const CartContainer = () => {
     const [newCart, setNewCart] = useState([]);
     const [loader, setLoader] = useState()
     const {cart, removeItem, clearCart, totalPrice} = useContext(cartContext);
+    const redirection = useNavigate();
+
 
     useEffect(() => {
         setNewCart(cart)
@@ -36,6 +39,9 @@ const CartContainer = () => {
         })
         setTimeout(() => {
             clearCart()
+        }, 2000);
+        setTimeout(() => {
+            redirection("/")
         }, 2000);
         }
         ).catch((error) => {

@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import "../../css/Itemcss.css"
+import { cartContext } from "../../storage/cartContext";
 
 const Item = (props) => {
 
+    const {checkStock} = useContext(cartContext);
     const {title, category, stock, img, price, id} = props.mangas;
 
   return (
@@ -18,7 +21,7 @@ const Item = (props) => {
                   {stock !== 0 ? 
                   <>
                   <div className="precio-y-stock">    
-                    <strong className="stock-carta">Stock: {stock}  |</strong>
+                    <strong className="stock-carta">Stock: {checkStock(props.mangas)}  |</strong>
                     <strong className="precio-carta"> |  ${price}</strong>
                   </div>
                   <Link to={`/item/${id}`}>

@@ -29,7 +29,7 @@ const ItemDetailContainer = () => {
         })
     }, []);
 
-    const {addToCart} = useContext(cartContext);
+    const {checkStock, addToCart} = useContext(cartContext);
     const [cant, setCant] = useState(0);
 
     const handleAddToCart = (quantity) => {
@@ -45,7 +45,12 @@ const ItemDetailContainer = () => {
         return (
             <>
                 <div className="container-manga">
-                    <ItemDetail manga={manga} onAddToCart={handleAddToCart} quantityProduct={cant} />
+                    <ItemDetail
+                    manga={manga} 
+                    updatedStock={checkStock(manga)} 
+                    onAddToCart={handleAddToCart} 
+                    quantityProduct={cant} 
+                    />
                 </div>  
             </>
         )
