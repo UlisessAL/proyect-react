@@ -29,9 +29,10 @@ npm start
 
 ## VIDEO DEMOSTRATIVO
 
-<video width="1000" controls autoplay loop> 
-    <source src="./ReadmeGif/GifWeb.mp4" alt="Gif-presentation"  type="video/mp4" > 
-</video>
+
+https://user-images.githubusercontent.com/104462396/214761063-23971d15-8b41-43c8-ab82-a1ba02e38040.mp4
+
+
 
 - Este proyecto fue realizado para curso de ReactJs de CoderHouse por Ulises Alejandro Larrabe
 
