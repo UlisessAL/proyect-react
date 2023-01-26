@@ -1,0 +1,69 @@
+@media screen and (min-width: 320px){
+    .formulary{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .h2-div-form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        background-color: rgb(255, 0, 0);
+        color: rgb(255, 255, 255);
+        margin-bottom: 50px;
+    }
+    
+    .h2-form{
+        font-size: 15px;
+        font-family: 'Anton', sans-serif;
+    }
+    
+    .form{
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: red;
+    }
+    
+    label{
+        font-family: 'Anton', sans-serif;
+    }
+    
+    .label-text{
+        color: white;
+        font-size: 15px;
+    }
+    
+    .end-purchase{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-color: rgb(255, 255, 255);
+        color: rgb(255, 0, 0);
+    }
+}
+
+@media screen and (min-width: 768px){
+
+    .form{
+        width: 400px;
+        border-radius: 10%;
+    }
+
+}
+
+@media screen and (min-width: 1440px){
+
+    .h2-div-form{
+        width: 1440px;
+    }
+    
+    .h2-form{
+        font-size: 20px;
+    }
+}
+
+
