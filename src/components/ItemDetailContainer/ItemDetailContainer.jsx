@@ -35,7 +35,6 @@ const ItemDetailContainer = () => {
     const handleAddToCart = (quantity) => {
         const mangaAndCount = {...manga, quantity:quantity}
         addToCart(mangaAndCount, quantity);
-        console.log(quantity);
         setCant(quantity);
     };
 

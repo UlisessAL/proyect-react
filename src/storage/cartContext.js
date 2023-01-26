@@ -16,11 +16,9 @@ function CartProvider(props){
         if (isInCart !== -1) {
             newCart[isInCart].quantity += cantidad;
             setCart(newCart);
-            console.log(newCart);
         } else {
             newCart.push(item)
             setCart(newCart)
-            console.log(newCart);
         }
     };
 
@@ -39,10 +37,6 @@ function CartProvider(props){
     const totalItemsInCart = () => {
         let total = 0;
         let product;
-        // for (product of cart) {
-        //     const {quantity} = product
-        //     total += quantity;
-        // }
 
         for (product of cart){
             total ++

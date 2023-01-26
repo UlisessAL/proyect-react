@@ -22,13 +22,9 @@ const FormCheckout = (props) => {
         return !(userData.name !== "" && userData.email !== "" && userData.phone !== "")
     }
 
-    console.log(validateForm());
-
     const submitForm = (evt) => {
         evt.preventDefault();
     }
-
-
 
     return (
     <>
@@ -42,7 +38,7 @@ const FormCheckout = (props) => {
             <form onSubmit={submitForm} className="form">
 
                 {formFields.map(field => (
-                    <InputForm  onChange={inputValue} name={field} value={userData[field]} label={userData[field]} />
+                    <InputForm key={field} onChange={inputValue} name={field} value={userData[field]} label={userData[field]} />
                 ))   }
 
                 <button type="submit" className="btn end-purchase" disabled={validateForm()} onClick={(evt) => props.handleCheckout(evt,userData)}>Finalizar Compra</button>
