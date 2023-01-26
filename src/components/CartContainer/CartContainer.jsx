@@ -2,7 +2,7 @@ import "../../css/CartContainer.css"
 import { useContext, useEffect, useState } from "react"
 import { cartContext } from "../../storage/cartContext"
 import { NoProductsAlert } from "../CartWidget/NoProducts/NoProductsAlert";
-import { createOrder } from "../../services/firebase";
+import { orderWithControlStock } from "../../services/firebase";
 import Swal from 'sweetalert2';
 import CartDetail from "./CartDetail/CartDetail";
 import FormCheckout from "./FormCheckout/FormCheckout";
@@ -28,15 +28,24 @@ const CartContainer = () => {
             date: new Date(),
         }
 
-        setTimeout(() => {
-            clearCart()
-        }, 2000);
-
-        createOrder(order).then((id) => Swal.fire({
+        orderWithControlStock(order).then((id) => 
+        {Swal.fire({
             icon: 'success',
             title: 'Su compra ha sido realizada',
             text: `Su id de compra es: ${id}`,
-        }));
+        })
+        setTimeout(() => {
+            clearCart()
+        }, 2000);
+        }
+        ).catch((error) => {
+            Swal.fire({
+                icon: 'error',
+                title: 'Hubo un problema al realizar su compra',
+                text: error,
+                confirmButtonText:"Regresar"
+            })
+        });
     }
 
     

@@ -73,10 +73,6 @@
         border-color: rgb(176, 59, 59);
     }
     
-    #btn-manga:disabled{
-        background-color: rgb(125, 83, 83);
-    }
-    
     .count{
         color: black;
         font-size: 15px;
@@ -94,6 +90,10 @@
         background-color: rgb(251, 0, 0);
         color: rgb(255, 255, 255);
         border-color: rgb(255,0,0);
+    }
+
+    #btn-manga:disabled, #manga-btn:disabled{
+        background-color: rgb(125, 83, 83);
     }
     
     .btn-cart{

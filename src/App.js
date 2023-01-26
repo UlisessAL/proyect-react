@@ -12,7 +12,6 @@ import CartContainer from './components/CartContainer/CartContainer';
 function App() {
   return (
     <div className='body-background'>
-
       <BrowserRouter>
         <CartProvider>
             <header className='main'>

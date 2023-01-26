@@ -44,39 +44,18 @@
         font-family: 'Anton', sans-serif;
     }
 
-
 }
 
 @media screen and (min-width: 768px){
 
     .navbar{
         z-index: 1;
-        width: 768px;
+        width: 100%;
     }
 
     .cont-carousel{
         display:inline-block;
-        width: 768px;
-    }
-
-}
-
-@media screen and (min-width: 1024px){
-
-    .navbar{
-        width: 1024px;
-    }
-
-}
-
-@media screen and (min-width: 1440px){
-
-    .cont-carousel{
-        width: 1440px;
-    }
-
-    .navbar{
-        width: 1440px;
+        width: 100%;
     }
 
 }

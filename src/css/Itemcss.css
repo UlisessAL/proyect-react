@@ -68,11 +68,20 @@
         padding-bottom: 10px;
     }
 
+    .no-stock{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 0, 0);
+        color: rgb(255, 255, 255);
+    }
+
+    .h2-no-stock{
+        font-family: 'Anton', sans-serif;
+    }
 
 }
-
-
-
 
 @media screen and (min-width: 768px){
     .grid-cartas{
