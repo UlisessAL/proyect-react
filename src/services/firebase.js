@@ -52,7 +52,6 @@ export async function createOrder(order){
     const orderRef = collection(db, "order");
 
     let respuesta = await addDoc(orderRef, order);
-    console.log(respuesta, respuesta.id);
     return respuesta.id;
 }
 
