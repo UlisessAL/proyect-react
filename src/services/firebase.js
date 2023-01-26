@@ -74,5 +74,3 @@ export async function exportArray(){
 }
 
 export default db;
-
-

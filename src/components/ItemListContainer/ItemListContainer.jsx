@@ -4,6 +4,7 @@ import { getMangaByCategory, getProducts } from "../../services/firebase";
 import Carousel from "../carousel/Carousel"
 import Loader from "../Loader/Loader";
 import ItemList from "./ItemList"
+import "../../css/Main.css"
 
 const ItemListContainer = () => {
 
@@ -34,6 +35,9 @@ const ItemListContainer = () => {
       return (
         <><div className='main'>
         <Carousel/>
+        <div className="cont-h1-cat">
+        <h1 className="h1-cat">Catálogo</h1>
+        </div>
         <ItemList productos={productos}/>
       </div></>
       )

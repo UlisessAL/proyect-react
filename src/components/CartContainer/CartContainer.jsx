@@ -65,13 +65,13 @@ const CartContainer = () => {
                                 {newCart.map((c) => {
                                     return(
                                         <tr key={c.id}>
-                                            <td ><img src={c.img} alt={c.img} className="img-cart" /></td>
-                                            <td > <strong>{c.title}</strong></td>
+                                            <td><img src={c.img} alt={c.img} className="img-cart" /></td>
+                                            <td> <strong>{c.title}</strong></td>
                                             <td> <strong>${c.price}</strong></td>
-                                            <td > <strong>{c.quantity}</strong></td>
-                                            <td > <strong>${c.quantity * c.price}</strong></td>
+                                            <td> <strong>{c.quantity}</strong></td>
+                                            <td> <strong>${c.quantity * c.price}</strong></td>
                                             <td>
-                                                <button onClick={() => removeItem(c)} className="btn  bg-orange-600 button-table"> X </button>
+                                                <button onClick={() => removeItem(c)} className="btn button-table"> X </button>
                                             </td>
                                         </tr>
                                     )})}
@@ -83,8 +83,8 @@ const CartContainer = () => {
                         </div>
 
                         <div className="buttons-cart">
-                            <button className="btn bg-orange-600 button-table" onClick={() => clearCart()}>borrar carrito</button>
-                            <button className="btn bg-orange-600 button-table end-purchase" onClick={handleCheckout} >Finalizar Compra</button>
+                            <button className="btn button-table clear-cart" onClick={() => clearCart()}>borrar carrito</button>
+                            <button className="btn button-table end-purchase" onClick={handleCheckout} >Finalizar Compra</button>
                         </div>
         
                         
