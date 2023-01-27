@@ -1,8 +1,9 @@
 
 ## E-COMMERCE MANGASTORE
 
-- Este proyecto está realizado a partir de HTML, CSS, JAVASCRIPT y REACTJS 
+- Este proyecto está realizado a partir de REACTJS 
 - La librería utilizada: [tailwindcss](https://tailwindcss.com) y [daisyUI](https://daisyui.com)
+- Se utilizaron dichas librerías para añadirle a la página estilos ya pre-definidos para que se vea mejor visualmente
 
 ## Como bajar el repositorio y correr la página
 
@@ -38,5 +39,5 @@ https://user-images.githubusercontent.com/104462396/215148800-20b8a2ec-065f-4e40
 
 
 
-- Este proyecto fue realizado para curso de ReactJs de CoderHouse por Ulises Alejandro Larrabe
+- Este proyecto fue realizado para el curso de ReactJs de la plataforma CoderHouse, por Ulises Alejandro Larrabe
 
