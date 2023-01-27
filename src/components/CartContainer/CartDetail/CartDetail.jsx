@@ -1,8 +1,7 @@
 const CartDetail = (props) => {
-  return (
-    <>
-
-<div className="table-cart">
+    return (
+        <>
+            <div className="table-cart">
                 <div className="table-cart-inf">
                     <div className="overflow-x-auto">
                         <table className="table-orig">
@@ -12,7 +11,7 @@ const CartDetail = (props) => {
                                     <th> Nombre</th>
                                     <th>Precio</th>
                                     <th>Cantidad</th>
-                                    <th>Total</th>
+                                    <th>Subtotal</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -46,6 +45,6 @@ const CartDetail = (props) => {
                 </div>
             </div>
         </>
-  )
+    )
 }
 export default CartDetail

@@ -33,13 +33,15 @@ const ItemListContainer = () => {
       return <Loader/>
     } else{
       return (
-        <><div className='main'>
-        <Carousel/>
-        <div className="cont-h1-cat">
-        <h1 className="h1-cat">Catálogo</h1>
-        </div>
-        <ItemList productos={productos}/>
-      </div></>
+          <>
+            <div className='main'>
+              <Carousel/>
+              <div className="cont-h1-cat">
+                <h1 className="h1-cat">Catálogo</h1>
+              </div>
+              <ItemList productos={productos}/>
+            </div>
+        </>
       )
     }
 }

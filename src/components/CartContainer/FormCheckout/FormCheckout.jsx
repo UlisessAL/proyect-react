@@ -27,26 +27,19 @@ const FormCheckout = (props) => {
     }
 
     return (
-    <>
-
-        <div className="formulary">
-        
-            <div className="h2-div-form">
-                <h2 className="h2-form">Completa este formulario para finalizar la compra</h2>
-            </div>
-            
-            <form onSubmit={submitForm} className="form">
-
-                {formFields.map(field => (
-                    <InputForm key={field} onChange={inputValue} name={field} value={userData[field]} label={userData[field]} />
-                ))   }
-
-                <button type="submit" className="btn end-purchase" disabled={validateForm()} onClick={(evt) => props.handleCheckout(evt,userData)}>Finalizar Compra</button>
-
-            </form>
-
-        </div>    
-    </>
+        <>
+            <div className="formulary">
+                <div className="h2-div-form">
+                    <h2 className="h2-form">Completa este formulario para finalizar la compra</h2>
+                </div>
+                <form onSubmit={submitForm} className="form">
+                    {formFields.map(field => (
+                        <InputForm key={field} onChange={inputValue} name={field} value={userData[field]} label={userData[field]} />
+                    ))   }
+                    <button type="submit" className="btn end-purchase" disabled={validateForm()} onClick={(evt) => props.handleCheckout(evt,userData)}>Finalizar Compra</button>
+                </form>
+            </div>    
+        </>
     )
 }
 export default FormCheckout

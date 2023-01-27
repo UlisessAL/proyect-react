@@ -59,13 +59,14 @@ const CartContainer = () => {
         return <NoProductsAlert/>
     } else{
         return ( 
-            <><CartDetail
-            newCart={newCart} 
-            clearCart={clearCart}  
-            removeItem={removeItem} 
-            totalPrice={totalPrice}
-            />
-            <FormCheckout handleCheckout={handleCheckout}/>
+            <>
+                <CartDetail
+                newCart={newCart} 
+                clearCart={clearCart}  
+                removeItem={removeItem} 
+                totalPrice={totalPrice}
+                />
+                <FormCheckout handleCheckout={handleCheckout}/>
             </>
         )
     }
