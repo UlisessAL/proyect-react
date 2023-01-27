@@ -42,7 +42,7 @@ function CartProvider(props){
         let product;
 
         for (product of cart){
-            total ++
+            total += product.quantity
         }
         return total;
     }
