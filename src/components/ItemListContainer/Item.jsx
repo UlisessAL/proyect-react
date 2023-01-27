@@ -18,7 +18,7 @@ const Item = (props) => {
                 <span className="categoria-carta">{category}</span>
                 <h2 className="title-carta">{title}</h2>
 
-                  {checkStock(props.mangas) !== 0 && stock !== 0 ? 
+                  {checkStock(props.mangas) > 0 && stock !== 0 ? 
                   <>
                   <div className="precio-y-stock">    
                     <strong className="stock-carta">Stock: {checkStock(props.mangas)}  |</strong>
