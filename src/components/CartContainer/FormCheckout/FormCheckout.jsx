@@ -4,7 +4,7 @@ import "../../../css/FormCheckout.css"
 
 const FormCheckout = (props) => {
 
-    const [userData, setUserData] = useState({name : "", email:"", phone:""});
+    const [userData, setUserData] = useState({name : "", email:"", repeatMail:"", phone:""});
 
     let formFields = Object.keys(userData);
 
@@ -19,7 +19,7 @@ const FormCheckout = (props) => {
     }
 
     const validateForm = () => {
-        return !(userData.name !== "" && userData.email !== "" && userData.phone !== "")
+        return !(userData.name !== "" && userData.email !== "" && userData.phone !== "" && userData.email === userData.repeatMail)
     }
 
     const submitForm = (evt) => {
