@@ -6,7 +6,7 @@ const LoadFailPage = () => {
   const redirection = useNavigate();
   setTimeout(() => {
     redirection("/")
-  }, 5000);
+  }, 3000);
 
   return (
           <>

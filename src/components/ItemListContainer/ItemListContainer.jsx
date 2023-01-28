@@ -1,31 +1,43 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { getMangaByCategory, getProducts } from "../../services/firebase";
 import Carousel from "../carousel/Carousel"
 import Loader from "../Loader/Loader";
 import ItemList from "./ItemList"
 import "../../css/Main.css"
+import Swal from 'sweetalert2';
 
 const ItemListContainer = () => {
 
   const [productos, setProductos] = useState([]),
   [loader, setLoader] = useState(),
+  redirection = useNavigate(),
   {categoryid} = useParams();
 
     useEffect(() => {
         if (!categoryid){
         getProducts().then((resolve) => {
-            setProductos(resolve);
-            setLoader(true);
+          setProductos(resolve);
+          setLoader(true);
         })}
         else{
             getMangaByCategory(categoryid).then((resolve) => {
+              if (resolve.length !== 0) {
                 setProductos(resolve);
                 setLoader(true);
+              } else {
+                return (
+                  Swal.fire({
+                    icon: 'error',
+                    title: 'Hubo un problema al cargar la página',
+                    text: "Está siendo redirigido",
+                  }, 
+                  setTimeout(() => {
+                    redirection("/")
+                  }, 2000)
+                ));
+              }
             })
-            .catch((error) => {
-              alert(error)
-              setLoader(true)});
         }
     }, [categoryid]);
 

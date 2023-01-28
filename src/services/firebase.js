@@ -17,11 +17,9 @@ const productsRef = collection(db, "products");
 
 export async function getProducts(){
     const snapshot = await getDocs(productsRef);
-
     const mangas = snapshot.docs.map((e) => {
         let manga = e.data()
         manga.id = e.id;
-
         return manga;
     });
 
@@ -30,7 +28,8 @@ export async function getProducts(){
 
 export async function getManga(idParams){
     const docRef = doc(productsRef, idParams);
-    const snapshot = await getDoc(docRef)
+    const snapshot = await getDoc(docRef);
+    
     return {...snapshot.data(), id: snapshot.id};
 };
 
