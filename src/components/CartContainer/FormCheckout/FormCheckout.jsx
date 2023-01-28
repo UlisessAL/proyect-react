@@ -34,9 +34,20 @@ const FormCheckout = (props) => {
                 </div>
                 <form onSubmit={submitForm} className="form">
                     {formFields.map(field => (
-                        <InputForm key={field} onChange={inputValue} name={field} value={userData[field]} label={userData[field]} />
-                    ))   }
-                    <button type="submit" className="btn end-purchase" disabled={validateForm()} onClick={(evt) => props.handleCheckout(evt,userData)}>Finalizar Compra</button>
+                        <InputForm 
+                            key={field} 
+                            onChange={inputValue} 
+                            name={field} 
+                            value={userData[field]} 
+                            label={userData[field]} />
+                    ))}
+                    <button 
+                        type="submit" 
+                        className="btn end-purchase" 
+                        disabled={validateForm()} 
+                        onClick={(evt) => props.handleCheckout(evt,userData)}>
+                        Finalizar Compra
+                    </button>
                 </form>
             </div>    
         </>

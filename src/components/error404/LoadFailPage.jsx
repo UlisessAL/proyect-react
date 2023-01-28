@@ -4,7 +4,6 @@ import "../../css/ItemDetail.css"
 const LoadFailPage = () => {
 
   const redirection = useNavigate();
-
   setTimeout(() => {
     redirection("/")
   }, 5000);

@@ -3,13 +3,13 @@ import { Link } from "react-router-dom"
 import { cartContext } from "../../storage/cartContext"
 
 const CartWidget = () => {
-    const context = useContext(cartContext)
-    const estiloCarrito = {
+    const context = useContext(cartContext),
+    estiloCarrito = {
         fontSize: "20px"
-    }
-    const estiloCant = {
+    },
+    estiloCant = {
         color:"white"
-    }
+    };
 
 return (
         <>

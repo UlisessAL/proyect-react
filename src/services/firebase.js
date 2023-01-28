@@ -31,7 +31,6 @@ export async function getProducts(){
 export async function getManga(idParams){
     const docRef = doc(productsRef, idParams);
     const snapshot = await getDoc(docRef)
-
     return {...snapshot.data(), id: snapshot.id};
 };
 
@@ -41,10 +40,8 @@ export async function getMangaByCategory(categoryId){
     const mangas = snapshot.docs.map((e) => {
         let manga = e.data()
         manga.id = e.id;
-
         return manga;
     });
-
     return mangas;
 }
 
@@ -81,9 +78,6 @@ export async function orderWithControlStock (order){
 
     let newOrder = await addDoc(orderRef, order);
     return newOrder.id;
-
-
-
 }
 
 export async function exportArray(){
@@ -102,7 +96,6 @@ export async function exportArray(){
         delete item.id;
         addDoc(collection(db, "products"), item);
     }
-    
 }
 
 export default db;

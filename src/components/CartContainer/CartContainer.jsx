@@ -32,26 +32,26 @@ const CartContainer = () => {
         }
 
         orderWithControlStock(order).then((id) => 
-        {Swal.fire({
-            icon: 'success',
-            title: 'Su compra ha sido realizada',
-            text: `Su id de compra es: ${id}`,
-        })
-        setTimeout(() => {
-            clearCart()
-        }, 2000);
-        setTimeout(() => {
-            redirection("/")
-        }, 2000);
-        }
-        ).catch((error) => {
-            Swal.fire({
-                icon: 'error',
-                title: 'Hubo un problema al realizar su compra',
-                text: error,
-                confirmButtonText:"Regresar"
+            {Swal.fire({
+                icon: 'success',
+                title: 'Su compra ha sido realizada',
+                text: `Su id de compra es: ${id}`,
             })
-        });
+            setTimeout(() => {
+                clearCart()
+            }, 2000);
+            setTimeout(() => {
+                redirection("/")
+            }, 2000);
+            }
+            ).catch((error) => {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Hubo un problema al realizar su compra',
+                    text: error,
+                    confirmButtonText:"Regresar"
+                })
+            });
     }
 
     
@@ -61,10 +61,10 @@ const CartContainer = () => {
         return ( 
             <>
                 <CartDetail
-                newCart={newCart} 
-                clearCart={clearCart}  
-                removeItem={removeItem} 
-                totalPrice={totalPrice}
+                    newCart={newCart} 
+                    clearCart={clearCart}  
+                    removeItem={removeItem} 
+                    totalPrice={totalPrice}
                 />
                 <FormCheckout handleCheckout={handleCheckout}/>
             </>

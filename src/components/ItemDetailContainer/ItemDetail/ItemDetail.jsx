@@ -19,8 +19,8 @@ const ItemDetail = (props) => {
                             {
                                 quantity === 0 ? 
                                 <ItemCount 
-                                stock={props.updatedStock} 
-                                onAddToCart={props.onAddToCart}
+                                    stock={props.updatedStock} 
+                                    onAddToCart={props.onAddToCart}
                                 />
                                 :
                                 <Link className="btn btn-cart" id="manga-btn" to="/cart">Terminar mi compra</Link>
